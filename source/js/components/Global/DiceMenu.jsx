@@ -18,6 +18,8 @@ export default class Menu extends Component {
             alt='Roll Initiative Logo'
           />
         </NavLink>
+        <RollContainer>
+        </RollContainer>
       </div>
     );
   }
