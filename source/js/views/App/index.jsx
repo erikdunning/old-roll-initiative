@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import Dashboard from 'views/Dashboard';
 import About from 'views/About';
 import NotFound from 'views/NotFound';
-import Menu from 'components/Global/Menu';
+import LinkMenu from 'components/Global/LinkMenu';
+import DiceMenu from 'components/Global/DiceMenu';
 
 const publicPath = '/';
 
@@ -23,7 +24,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className='App'>
-          <Menu />
+          <DiceMenu />
           <div className='Page'>
             <Switch>
               <Route exact path={ publicPath } component={ Dashboard } />
@@ -31,6 +32,7 @@ export default class App extends Component {
               <Route path='*' component={ NotFound } />
             </Switch>
           </div>
+          <LinkMenu />
         </div>
       </BrowserRouter>
     );

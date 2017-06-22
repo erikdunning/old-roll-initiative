@@ -42,6 +42,7 @@
     "postcss-loader": "^1.1.1",
     "prepush": "^3.1.11",
     "redux-logger": "^2.7.4",
+    "roll": "^1.2.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.0",
     "svg-sprite-loader": "^2.1.0",

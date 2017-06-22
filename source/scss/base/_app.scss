@@ -6,6 +6,8 @@ $grey-text: #aaa;
 $black: #000;
 $white: #fff;
 
+$left-margin: 8rem;
+
 html {
   font-size: 10px;
 
@@ -80,18 +82,19 @@ button:hover {
 }
 
 .Menu {
+  position: absolute;
+  top: 0;
+  left: 0;
   align-items: center;
-  border-bottom: 1px solid $grey-border;
   display: flex;
   justify-content: space-between;
   padding-bottom: 2rem;
   margin: 0 auto 2rem;
-  max-width: 60rem;
+  width: 100%;
 
   @include lg {
-    margin-left: 20rem;
-    margin: 0 0 2rem 20rem;
-    padding-bottom: 0;
+
+
   }
 }
 
@@ -99,42 +102,33 @@ button:hover {
   display: block;
 }
 
-.Menu-logo {
-  margin-right: 2rem;
-  width: 6rem;
-
-  @include lg {
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    border-right: 1px solid $grey-border;
-    width: 20rem;
-    padding: 4rem;
-  }
+.DiceMenu {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  border-right: 1px solid $grey-border;
+  width: $left-margin;
+  padding: 1rem;
 }
 
-.Menu-links {
-  @include md {
-  }
+.LinkMenu {
+  position: absolute;
+  top: 0;
+  left: $left-margin;
+  background: white;
+  opacity: 1;
+  width: calc(100% - $let-margin);
+  z-index: 100;
 }
 
 .Menu-link {
   display: inline-block;
+  padding: 1rem 0 1rem 0;
   font-family: $font-family-serif;
-  font-style: italic;
   margin-left: 1.5rem;
   line-height: 3rem;
   text-decoration: none;
-
-  @include md {
-    margin-left: 3rem;
-  }
-
-  @include lg {
-    margin: 0 3rem 0 0;
-    line-height: 7.5rem;
-  }
 }
 
 .Menu-link--active {
@@ -142,12 +136,12 @@ button:hover {
 }
 
 .Page {
-  max-width: 60rem;
-  margin: 0 auto;
-
-  @include lg {
-    margin: 0 0 0 20rem;
-  }
+  position: absolute;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: calc( 100% - 8rem );
+  left: $left-margin;
+  top: 2rem;
 }
 
 .Example {
