@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { routeCodes } from '../../views/App';
-import workAndCoLogoImg from '../../../assets/img/workco-logo.svg';
+import { routePaths } from '../../views/App';
+import rollInitiativeImg from '../../../assets/img/roll-initiative.svg';
 
 export default class Menu extends Component {
   render() {
@@ -9,7 +9,7 @@ export default class Menu extends Component {
       <div className='Menu'>
         <div className='Menu-logo'>
           <img
-            src={ workAndCoLogoImg }
+            src={ rollInitiativeImg }
             alt='Work & Co logo'
           />
         </div>
@@ -18,23 +18,16 @@ export default class Menu extends Component {
             activeClassName='Menu-link--active'
             className='Menu-link'
             exact
-            to={ routeCodes.DASHBOARD }
+            to={ routePaths.DASHBOARD }
           >
             Home
           </NavLink>
           <NavLink
             activeClassName='Menu-link--active'
             className='Menu-link'
-            to={ routeCodes.ABOUT }
+            to={ routePaths.ABOUT }
           >
             About
-          </NavLink>
-          <NavLink
-            activeClassName='Menu-link--active'
-            className='Menu-link'
-            to='404'
-          >
-            404
           </NavLink>
         </div>
       </div>

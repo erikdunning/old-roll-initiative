@@ -4,17 +4,15 @@ export default class About extends Component {
   render() {
     return (
       <div className='About'>
-        <h1>About Marvin</h1>
+        <h1>About</h1>
 
         <p>
-          Marvin is internal project by <a href='https://work.co'>Work & Co</a>.
-          We love React and use it a lot. So Marvin is meant to be a starting point
-          for our React projects. But as we love open source too, it is publicly
-          available for anyone interested in using it.
+          Roll Initiaive is a simple app to help Dungeon Master's rotate through battle
+          order and keep track of status effects.
         </p>
         <p>
           Visit documentation
-          on <a href='https://github.com/workco/react-redux-webpack2-boilerplate'>GitHub</a>
+          on <a href='https://github.com/erikdunning/roll-initiative'>GitHub</a>
         </p>
       </div>
     );

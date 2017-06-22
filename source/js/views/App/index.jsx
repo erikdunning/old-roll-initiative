@@ -9,7 +9,7 @@ import Menu from 'components/Global/Menu';
 
 const publicPath = '/';
 
-export const routeCodes = {
+export const routePaths = {
   DASHBOARD: publicPath,
   ABOUT: `${ publicPath }about`,
 };
@@ -27,7 +27,7 @@ export default class App extends Component {
           <div className='Page'>
             <Switch>
               <Route exact path={ publicPath } component={ Dashboard } />
-              <Route path={ routeCodes.ABOUT } component={ About } />
+              <Route path={ routePaths.ABOUT } component={ About } />
               <Route path='*' component={ NotFound } />
             </Switch>
           </div>
