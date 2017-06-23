@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { routePaths } from '../../views/App';
 
-export default class Menu extends Component {
+export default class LinkMenu extends Component {
   render() {
     return (
       <div className='LinkMenu'>

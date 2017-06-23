@@ -110,6 +110,7 @@ button:hover {
   border-right: 1px solid $grey-border;
   width: $left-margin;
   padding: 1rem;
+  overflow: hidden;
 }
 
 .LinkMenu {
