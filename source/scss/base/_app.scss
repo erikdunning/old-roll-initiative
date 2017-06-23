@@ -1,5 +1,7 @@
-$font-family-serif: Garamond, "Times New Roman", serif;
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab');
+
+$font-family-serif: Garamond, "Josefin Slab", serif;
+$font-family-cursive: "Amatic SC", sans-serif;
 
 $grey-border: #eee;
 $grey-text: #aaa;
@@ -22,7 +24,7 @@ html {
 
 body {
   color: $black;
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-serif;
 }
 
 .App {
@@ -38,6 +40,27 @@ body {
   }
 }
 
+.Dashboard {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+
+  hr {
+    position: relative;
+    left: -1rem;
+    margin: 1rem 0;
+    width: calc(100% + 2rem);
+    box-sizing: border-box;
+    padding: 0;
+    display: block;
+
+  }
+}
+
+.Dashboard-tagline {
+  font-size: 1.5rem;
+}
+
 a {
   color: $grey-text;
 }
@@ -50,6 +73,7 @@ h1,
 h2,
 h3 {
   margin: 2rem 0;
+  font-family: $font-family-cursive;
 }
 
 h1 {
@@ -98,8 +122,13 @@ button:hover {
   }
 }
 
-.Menu img {
+.DiceMenu-toggle-image {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
   display: block;
+  width: 6rem;
+  height: 6rem;
 }
 
 .DiceMenu {
@@ -111,28 +140,37 @@ button:hover {
   width: $left-margin;
   padding: 1rem;
   overflow: hidden;
+  transition: width 0.5s;
+  background: white;
+}
+
+.DiceMenu--open {
+  width: 100%;
 }
 
 .LinkMenu {
-  position: absolute;
-  top: 0;
-  left: $left-margin;
   background: white;
   opacity: 1;
-  width: calc(100% - $let-margin);
+  width: 100%;
   z-index: 100;
 }
 
-.Menu-link {
+.LinkMenu-title {
+  font-family: $font-family-cursive;
+  font-size: 4rem;
+  margin-right: 1.5rem;
+}
+
+.LinkMenu-link {
   display: inline-block;
   padding: 1rem 0 1rem 0;
-  font-family: $font-family-serif;
-  margin-left: 1.5rem;
+  font-family: $font-family-cursive;
+  margin-right: 1.5rem;
   line-height: 3rem;
   text-decoration: none;
 }
 
-.Menu-link--active {
+.LinkMenu-link--active {
   color: $black;
 }
 
@@ -142,7 +180,7 @@ button:hover {
   padding: 1rem;
   width: calc( 100% - 8rem );
   left: $left-margin;
-  top: 2rem;
+  top: 0;
 }
 
 .Example {

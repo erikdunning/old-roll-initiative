@@ -24,15 +24,15 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className='App'>
-          <DiceMenu />
           <div className='Page'>
+            <LinkMenu />
             <Switch>
               <Route exact path={ publicPath } component={ Dashboard } />
               <Route path={ routePaths.ABOUT } component={ About } />
               <Route path='*' component={ NotFound } />
             </Switch>
           </div>
-          <LinkMenu />
+          <DiceMenu />
         </div>
       </BrowserRouter>
     );
