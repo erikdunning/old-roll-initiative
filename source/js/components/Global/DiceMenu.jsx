@@ -1,23 +1,30 @@
 import React, { Component } from 'react';
-import RollContainer from './RollContainer'
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import RollContainer from './RollContainer';
+import { openDiceMenu } from '../../actions/app'
 import rollInitiativeImg from '../../../assets/img/roll-initiative.svg';
 
+@connect(state => ({
+  diceMenuOpen: state.app.get('diceMenuOpen'),
+}))
 export default class DiceMenu extends Component {
+  static propTypes = {
+    diceMenuOpen: PropTypes.bool,
+    // from react-redux connect
+    dispatch: PropTypes.func
+  }
   constructor(){
     super();
-    this.state = {
-      diceMenuOpen: false
-    };
     this.toggleDiceMenu = this.toggleDiceMenu.bind(this);
     this._getDiceMenuClasses = this._getDiceMenuClasses.bind(this);
   }
   toggleDiceMenu(){
-    this.setState({
-      diceMenuOpen: !this.state.diceMenuOpen
-    });
+    const { dispatch } = this.props;
+    dispatch(openDiceMenu());
   }
   _getDiceMenuClasses(){
-    return 'DiceMenu' + ( this.state.diceMenuOpen ? ' DiceMenu--open' : '');
+    return 'DiceMenu' + ( this.props.diceMenuOpen ? ' DiceMenu--open' : '');
   }
   render() {
     return (
