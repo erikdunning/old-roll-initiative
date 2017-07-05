@@ -12,6 +12,10 @@ const publicPath = '/';
 
 export const routePaths = {
   DASHBOARD: publicPath,
+  ENCOUNTERS: `${ publicPath }encounters`,
+  PLAYERS: `${ publicPath }players`,
+  PARTIES: `${ publicPath }parties`,
+  CAMPAIGNS: `${ publicPath }campaigns`,
   ABOUT: `${ publicPath }about`,
 };
 
