@@ -17,7 +17,6 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div className='Dashboard'>
-        <hr />
       </div>
     );
   }

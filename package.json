@@ -56,6 +56,7 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "es6-promise": "^3.3.1",
+    "googleapis": "^20.1.0",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.5.10",

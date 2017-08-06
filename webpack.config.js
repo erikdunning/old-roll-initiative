@@ -175,6 +175,12 @@ module.exports = {
     hot: !isProduction,
     host: '0.0.0.0',
     disableHostCheck: true,
+    proxy: {
+      '/api/*': {
+        target: 'http://localhost:3001',
+        secure: false
+      }
+    },
     stats: {
       assets: true,
       children: false,

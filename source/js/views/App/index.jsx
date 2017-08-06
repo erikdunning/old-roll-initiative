@@ -13,10 +13,11 @@ const publicPath = '/';
 export const routePaths = {
   DASHBOARD: publicPath,
   ENCOUNTERS: `${ publicPath }encounters`,
-  PLAYERS: `${ publicPath }players`,
+  CHARACTERS: `${ publicPath }characters`,
   PARTIES: `${ publicPath }parties`,
   CAMPAIGNS: `${ publicPath }campaigns`,
   ABOUT: `${ publicPath }about`,
+  LOGOUT: `${ publicPath }logout`,
 };
 
 export default class App extends Component {

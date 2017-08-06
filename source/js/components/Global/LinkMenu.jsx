@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import { routePaths } from '../../views/App';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { openDiceMenu } from '../../actions/app'
+import rollInitiativeImg from '../../../assets/img/roll-initiative.svg';
 
-export default class LinkMenu extends Component {
+class LinkMenu extends Component {
+  static propTypes = {
+    // from react-redux connect
+    dispatch: PropTypes.func
+  }
+  constructor(){
+    super();
+  }
   render() {
     return (
       <div className='LinkMenu'>
+        <img
+          className="LinkMenu-die-image"
+          src={ rollInitiativeImg }
+          alt='Roll Initiative Logo'
+          onClick={this.props.openDiceMenu}
+        />
         <span className='LinkMenu-title'>Roll Initiative</span>
-        <NavLink
-          activeClassName='LinkMenu-link--active'
-          className='LinkMenu-link'
-          exact
-          to={ routePaths.DASHBOARD }
-        >
-          Home
-        </NavLink>
-        <NavLink
-          activeClassName='LinkMenu-link--active'
-          className='LinkMenu-link'
-          to={ routePaths.ABOUT }
-        >
-          About
-        </NavLink>
       </div>
     );
   }
 }
+
+export default connect(null, {openDiceMenu})(LinkMenu);
