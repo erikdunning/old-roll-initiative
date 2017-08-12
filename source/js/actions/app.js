@@ -3,13 +3,16 @@
 Generally more useful for Redux Reducers rather than Action Creators, but actions
 can be loaded with arbitrary information. */
 import api from 'api';
-
-/* Action Types */
-export const OPEN_DICE_MENU = 'OPEN_DICE_MENU';
+import * as types from './types'
 
 /* Action Creators */
 export function openDiceMenu(){
   return {
-    type: OPEN_DICE_MENU
+    type: types.OPEN_DICE_MENU
   }; 
+}
+export function closeDiceMenu(){
+  return {
+    type: types.CLOSE_DICE_MENU
+  };
 }

@@ -1,17 +1,19 @@
 import { Map } from 'immutable';
-
-import {
-  OPEN_DICE_MENU
-} from 'actions/app';
+import * as types from '../actions/types'
 
 const initialState = Map({
   diceMenuOpen: false
 });
 
 const actionsMap = {
-  [OPEN_DICE_MENU]: (state, action) => {
+  [types.OPEN_DICE_MENU]: (state, action) => {
     return state.merge({
-      diceMenuOpen: !state.get('diceMenuOpen')
+      diceMenuOpen: true
+    });
+  },
+  [types.CLOSE_DICE_MENU]: (state, action) => {
+    return state.merge({
+      diceMenuOpen: false
     });
   },
 };

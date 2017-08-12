@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { openDiceMenu } from '../../actions/app'
+import * as appActions from '../../actions/app'
 import rollInitiativeImg from '../../../assets/img/roll-initiative.svg';
 
 class LinkMenu extends Component {
@@ -27,4 +27,4 @@ class LinkMenu extends Component {
   }
 }
 
-export default connect(null, {openDiceMenu})(LinkMenu);
+export default connect(null, {...appActions})(LinkMenu);

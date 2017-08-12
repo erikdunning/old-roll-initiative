@@ -148,7 +148,7 @@ button:hover {
   height: 100%;
   background: #8A0707;
   box-shadow: 0 0 15px black;
-  transition: left 0.5s;
+  transition: left 0.25s;
 }
 
 .LinkMenu {
@@ -188,6 +188,7 @@ button:hover {
 
 .LinkMenu-link--active {
   color: white;
+  background: rgba(0,0,0,0.15);
 }
 
 .Page {
