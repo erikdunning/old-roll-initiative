@@ -1,18 +1,26 @@
 const express = require('express')
 const router = express.Router()
+const api = require('./api-controller')
 
 // middleware that is specific to this router
 router.use(function timeLog (req, res, next) {
-  console.log('Time: ', Date.now())
+  console.log(req.session.ga)
   next()
 })
 // define the home page route
-router.get('/', function (req, res) {
-  res.send('Birds home page')
+router.get('/user/login', function (req, res) {
+  res.redirect(api.googleLogin());
 })
 // define the about route
-router.get('/about', function (req, res) {
-  res.send('About birds')
+router.get('/auth/google', function (req, res) {
+  if(req.query.code){
+    api.googleOAuthHandshake(req.query.code, function(tokens){
+      req.session.ga = tokens
+      res.redirect('/');
+    });
+  } else {
+    res.redirect('/authentication/error')
+  }
 })
 
 module.exports = router

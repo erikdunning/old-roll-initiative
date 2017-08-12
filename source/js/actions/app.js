@@ -6,13 +6,18 @@ import api from 'api';
 import * as types from './types'
 
 /* Action Creators */
+export function loginUser(){
+  return {
+    type: types.LOGIN_USER
+  } 
+}
 export function openDiceMenu(){
   return {
     type: types.OPEN_DICE_MENU
-  }; 
+  } 
 }
 export function closeDiceMenu(){
   return {
     type: types.CLOSE_DICE_MENU
-  };
+  }
 }

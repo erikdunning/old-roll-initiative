@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { } from 'actions/app';
+import * as appActions from '../../actions/app';
 import Icon from 'components/Global/Icon';
 
-@connect(state => ({
-}))
-export default class Dashboard extends Component {
-  static propTypes = {
-    // from react-redux connect
-    dispatch: PropTypes.func,
-  }
+class Dashboard extends Component {
   constructor() {
     super();
   }
   render() {
     return (
       <div className='Dashboard'>
+        <div onClick={this.props.performGoogleAuth}>
+          login link
+        </div>
       </div>
     );
   }
 }
+
+export default connect(null, {...appActions})(Dashboard);
