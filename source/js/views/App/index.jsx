@@ -31,11 +31,13 @@ export default class App extends Component {
         <div className='App'>
           <div className='Page'>
             <LinkMenu />
-            <Switch>
-              <Route exact path={ publicPath } component={ Dashboard } />
-              <Route path={ routePaths.ABOUT } component={ About } />
-              <Route path='*' component={ NotFound } />
-            </Switch>
+            <div className="Content">
+              <Switch>
+                <Route exact path={ publicPath } component={ Dashboard } />
+                <Route path={ routePaths.ABOUT } component={ About } />
+                <Route path='*' component={ NotFound } />
+              </Switch>
+            </div>
           </div>
           <DiceMenu />
         </div>

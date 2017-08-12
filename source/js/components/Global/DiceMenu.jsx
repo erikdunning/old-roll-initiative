@@ -56,4 +56,4 @@ const mapStateToProps = (state) => {
     diceMenuOpen: state.app.get('diceMenuOpen')
   };
 }
-export default connect(mapStateToProps, { openDiceMenu })(DiceMenu);
+export default connect(mapStateToProps, {openDiceMenu}, null, {pure: false})(DiceMenu);
