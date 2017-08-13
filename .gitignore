@@ -5,5 +5,5 @@ build
 *.log*
 _nogit
 .env
-database
+*database
 sessions
