@@ -1,20 +1,12 @@
 require('dotenv').config()
+const config = require('./config/config.json')
 const express = require('express')
 const session = require('express-session')
-const SQLiteStore = require('connect-sqlite3')(session);
-const apiRouter = require('./api-router')
+const SQLiteStore = require('connect-sqlite3')(session)
+const apiRouter = require('./routers/api-router')
 const app = express()
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize(null, null, null, {
-  host: 'localhost',
-  dialect: 'sqlite',
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 10000
-  },
-  storage: 'database'
-})
+const sequelize = new Sequelize(config[app.get('env')])
 
 /* Verify the application database exists and it's reachable. */
 sequelize

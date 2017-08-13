@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const api = require('./api-controller')
+const api = require('../controllers/api-controller')
 
 // middleware that is specific to this router
 router.use(function timeLog (req, res, next) {
