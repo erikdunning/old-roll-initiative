@@ -1,5 +1,6 @@
 require('dotenv').config()
 const config = require('./config/config.json')
+const logger = require('./modules/logger')
 const express = require('express')
 const session = require('express-session')
 const SQLiteStore = require('connect-sqlite3')(session)
@@ -7,6 +8,8 @@ const apiRouter = require('./routers/api-router')
 const app = express()
 const Sequelize = require('sequelize')
 const sequelize = new Sequelize(config[app.get('env')])
+
+logger.info('penus')
 
 /* Verify the application database exists and it's reachable. */
 sequelize
