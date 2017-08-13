@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import 'babel-polyfill';
 import logger from 'dev/logger';
 
-import rootReducer from 'reducers';
+// Needed for onTouchTap 
+// http://stackoverflow.com/a/34015469/988941 
+injectTapEventPlugin();
 
-import App from 'views/App';
-
-// Load SCSS
+// Load App Files
 import '../scss/app.scss';
+import rootReducer from 'reducers';
+import App from 'views/App';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -52,7 +56,9 @@ if (isProduction) {
 // Render it to DOM
 ReactDOM.render(
   <Provider store={ store }>
-    <App />
+    <MuiThemeProvider>
+      <App />
+    </MuiThemeProvider>
   </Provider>,
   document.getElementById('root')
 );
