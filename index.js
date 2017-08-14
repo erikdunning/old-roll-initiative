@@ -9,16 +9,14 @@ const app = express()
 const Sequelize = require('sequelize')
 const sequelize = new Sequelize(config[app.get('env')])
 
-logger.info('penus')
-
 /* Verify the application database exists and it's reachable. */
 sequelize
   .authenticate()
   .then(() => {
-    console.log('Connection has been established successfully.');
+    logger.info('Connection has been established successfully.');
   })
   .catch(err => {
-    console.error('Unable to connect to the database:', err);
+    logger.error('Unable to connect to the database:', err);
   });
 
 /* Initialize session management. */
