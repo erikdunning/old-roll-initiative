@@ -7,8 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "dev-server": "node_modules/.bin/nodemon -e 'js,jsx'",
-    "log": "tail -f application.log | node_modules/.bin/bunyan --color",
+    "dev-server": "node_modules/.bin/nodemon index.js -e 'js,jsx'",
+    "server": "node index.js",
+    "log": "tail -f logs/application.log | node_modules/.bin/bunyan --color",
     "dev": "webpack-dashboard -t 'Roll Initiative' -- webpack-dev-server",
     "build": "rm -rf ./build && NODE_ENV=\"production\" webpack",
     "lint-break-on-errors": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx",
