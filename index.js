@@ -6,18 +6,25 @@ const session = require('express-session')
 const SQLiteStore = require('connect-sqlite3')(session)
 const apiRouter = require('./routers/api-router')
 const app = express()
-const Sequelize = require('sequelize')
-const sequelize = new Sequelize(config[app.get('env')])
+const Sequelize = require('sequelize');
+const env = process.env.NODE_ENV || "development";
+
+/* Initialize database connection */
+var sequelize = new Sequelize(config[env]);
 
 /* Verify the application database exists and it's reachable. */
 sequelize
-  .authenticate()
-  .then(() => {
-    logger.info('Connection has been established successfully.');
-  })
-  .catch(err => {
-    logger.error('Unable to connect to the database:', err);
-  });
+.authenticate()
+.then(() => {
+  logger.info('Connection has been established successfully.');
+})
+.catch(err => {
+  logger.error('Unable to connect to the database:', err);
+});
+
+/* Load and configure models so they are accessible anywhere within the app. */
+const models = require('./models')(sequelize)
+app.set('models', models);
 
 /* Initialize session management. */
 app.use(session({
