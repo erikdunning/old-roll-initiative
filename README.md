@@ -13,35 +13,39 @@ on hover name and formula, on click compute roll with library, configurable die 
 ## Models ##
 
 #### Campaigns ####
-*Campaign*
+**Campaign**
 - id
 - name
-*CampaignEncounter*
+
+**CampaignEncounter**
 - campaign id
 - encounter id
-*CampaignUser*
+
+**CampaignUser**
 - campign id
 - user id
 - role
 
 #### Encounters ####
-*Encounter*
+**Encounter**
 - id
 - name
-*EncounterParty*
+
+**EncounterParty**
 - party id
 - encounter id
 
 #### Parties ####
-*Party*
+**Party**
 - id
 - name
-*PartyCharacter*
+
+**PartyCharacter**
 - party id
 - character id
 
 #### Characters ####
-*Character*
+**Character**
 - type ('npc','pc')
 - name,
 - height, 
