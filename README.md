@@ -12,7 +12,7 @@ on hover name and formula, on click compute roll with library, configurable die 
 
 ## Models ##
 
-#### Campaigns ####
+### Campaigns ###
 **Campaign**
 - id
 - name
@@ -26,7 +26,7 @@ on hover name and formula, on click compute roll with library, configurable die 
 - user id
 - role
 
-#### Encounters ####
+### Encounters ###
 **Encounter**
 - id
 - name
@@ -35,7 +35,7 @@ on hover name and formula, on click compute roll with library, configurable die 
 - party id
 - encounter id
 
-#### Parties ####
+### Parties ###
 **Party**
 - id
 - name
@@ -44,7 +44,7 @@ on hover name and formula, on click compute roll with library, configurable die 
 - party id
 - character id
 
-#### Characters ####
+### Characters ###
 **Character**
 - type ('npc','pc')
 - name,
@@ -60,7 +60,7 @@ on hover name and formula, on click compute roll with library, configurable die 
 - challenge rating, 
 - notes ( Markdown )
 
-### Ideas ###
+## Ideas ##
 - Dead players are grayed out
 - Integrated calculator for hitpoint value ( value, add, remove )
 - Only the creator of a campaign can administrate it ( owned by googleid )
