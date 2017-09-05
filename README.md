@@ -84,25 +84,15 @@ is computed for all parties involved in the encounter.  For each of these
 party characters, a corresponding character instance is created which
 contains a copy of all the current values.
 
+If NPC characters have computed (string) attribute values, they will be
+calculated automatically when a character instance is created.
+
 - id
 - encounter instance id
 - party id
 - character id
 - alias
-- id 
-- type ('npc','pc')
-- name,
-- height, 
-- weight, 
-- age,
-- size,
-- speed, 
-- hit points, 
-- spell slots ( tick of check boxes? ),
-- attributes,
-- experience, 
-- challenge rating, 
-- notes ( Markdown )
+- character clone id
 
 ### Parties ###
 
