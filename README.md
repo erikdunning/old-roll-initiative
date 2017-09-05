@@ -12,16 +12,23 @@ on hover name and formula, on click compute roll with library, configurable die 
 
 ## Models ##
 
+### Users ###
+**User**
+- google_id
+- role
+
 ### Campaigns ###
 **Campaign**
 - id
 - name
 
 **CampaignEncounter**
+- id
 - campaign id
 - encounter id
 
 **CampaignUser**
+- id
 - campign id
 - user id
 - role
@@ -32,8 +39,20 @@ on hover name and formula, on click compute roll with library, configurable die 
 - name
 
 **EncounterParty**
+- id
 - party id
 - encounter id
+
+-----------------------------------------
+
+**EncounterInstance**
+- id
+- encounter id
+
+**CharacterInstance**
+- id
+- encounter instance id
+- character id
 
 ### Parties ###
 **Party**
@@ -41,11 +60,13 @@ on hover name and formula, on click compute roll with library, configurable die 
 - name
 
 **PartyCharacter**
+- id
 - party id
 - character id
 
 ### Characters ###
 **Character**
+- id 
 - type ('npc','pc')
 - name,
 - height, 
