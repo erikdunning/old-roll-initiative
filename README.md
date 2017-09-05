@@ -1,15 +1,16 @@
+# Roll Initiative #
 
-### Displays ###
+## Displays ##
 
-#### Users ####
+### Users ###
 
 view user information for a given account authenticated with google
 
-#### Dashboard ####
+### Dashboard ###
 
 displays the current encounter for the currect campaign with different options depending on user privelige ( admin or not )
 
-#### QuickRoll ####
+### QuickRoll ###
 
 on hover name and formula, on click compute roll with library, configurable die icon ( type and color )
 
