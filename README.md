@@ -135,9 +135,21 @@ current spell slots, notes, and other information exists as
 - challenge rating,
 - notes ( Markdown )
 
+## TODO ##
+
+1. Create initial migrations for each model with relationships.
+2. Exercise the basics of:
+    - Logging in / out ( creating a user )
+    - Campaign CRUD
+3. Character CRUD
+4. Party CRUD
+5. Encounter CRUD
+6. Roll Initiative!
+    - Instantiate an encounter, order by initiative rolls
+
 ## Ideas ##
 
-- Dead players are grayed out
-- Integrated calculator for hitpoint value ( value, add, remove )
-- Only the creator of a campaign can administrate it ( owned by googleid )
-- Prepopulate database with NPC / PC character definitions via Sequelize fixtures
+1. Dead players are grayed out
+2. Integrated calculator for hitpoint value ( value, add, remove )
+3. Only the creator of a campaign can administrate it ( owned by googleid )
+4. Prepopulate database with NPC / PC character definitions via Sequelize fixtures
