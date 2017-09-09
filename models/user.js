@@ -6,8 +6,10 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
-      associate: function(models) {
-        // associations can be defined here
+      associate: models => {
+        const { user, group } = models
+        console.log('PENUS',user.hasMany(group))
+        return user.sync
       }
     }
   });

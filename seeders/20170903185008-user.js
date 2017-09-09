@@ -1,10 +1,12 @@
 'use strict';
 
-const modelLoader = require('../models');
+const Models = require('../models');
 
 module.exports = {
   up: function (queryInterface, Sequelize) {
-    const models = modelLoader(queryInterface.sequelize);
+    Models(queryInterface.sequelize).then(models => {
+
+    })
     /*
       return a promise here
     */
