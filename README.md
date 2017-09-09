@@ -97,6 +97,7 @@ calculated automatically when a character instance is created.
 ### Parties ###
 
 **Party**
+
 - id
 - name
 
@@ -105,6 +106,7 @@ calculated automatically when a character instance is created.
 There could be multiple copies of the same character in a
 given party with.  For example, there may be a couple skeleton warriors
 in a party with multiple aliases used to differentiate them.
+
 - id
 - party id
 - character id
@@ -121,16 +123,16 @@ current spell slots, notes, and other information exists as
 - id
 - type ('npc','pc')
 - name,
-- height, 
-- weight, 
+- height,
+- weight,
 - age,
 - size,
 - speed, 
-- hit points, 
+- hit points,
 - spell slots ( tick of check boxes? ),
 - attributes,
-- experience, 
-- challenge rating, 
+- experience,
+- challenge rating,
 - notes ( Markdown )
 
 ## Ideas ##
